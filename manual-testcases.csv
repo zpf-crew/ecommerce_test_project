@@ -1,0 +1,58 @@
+Test Case ID,Feature,Scenario,Preconditions,Test Steps,Test Data,Expected Result,Priority,Status
+TC-HOME-001,Homepage,Verify homepage loads successfully,None,1. Navigate to /,None,Homepage displays with hero, categories, featured products,High,Pass
+TC-HOME-002,Homepage,Verify hero section CTA buttons work,None,1. Click "Shop Now" button,None,Navigates to /products page,High,Pass
+TC-HOME-003,Homepage,Verify category cards are clickable,None,1. Click on "Electronics" category,None,Navigates to /products?category=electronics,High,Pass
+TC-HOME-004,Homepage,Verify featured products display,None,1. Scroll to featured products section,None,8 featured products displayed,High,Pass
+TC-HOME-005,Homepage,Verify testimonials section,None,1. Scroll to testimonials section,None,5 testimonials displayed,Medium,Pass
+TC-HOME-006,Homepage,Verify footer newsletter form,None,1. Enter email in newsletter form,test@example.com,Form accepts email input,Low,Pass
+TC-PROD-001,Product Listing,Verify products grid displays,None,1. Navigate to /products,None,Products displayed in grid layout,High,Pass
+TC-PROD-002,Product Listing,Verify search functionality,None,1. Enter "headphones" in search box,headphones,Products filtered to show headphones,High,Pass
+TC-PROD-003,Product Listing,Verify category filter,None,1. Select "Electronics" from category dropdown,Electronics,Only electronics products shown,High,Pass
+TC-PROD-004,Product Listing,Verify price range filter,None,1. Adjust price slider,0-200,Products filtered by price range,Medium,Pass
+TC-PROD-005,Product Listing,Verify rating filter,None,1. Select "4+ Stars" rating filter,4,Products with 4+ rating shown,Medium,Pass
+TC-PROD-006,Product Listing,Verify in-stock filter,None,1. Check "In Stock Only",None,Only in-stock products shown,Medium,Pass
+TC-PROD-007,Product Listing,Verify sort by price ascending,None,1. Select "Price: Low to High",None,Products sorted by price ascending,Medium,Pass
+TC-PROD-008,Product Listing,Verify sort by price descending,None,1. Select "Price: High to Low",None,Products sorted by price descending,Medium,Pass
+TC-PROD-009,Product Listing,Verify sort by rating,None,1. Select "Highest Rated",None,Products sorted by rating,Medium,Pass
+TC-PROD-010,Product Listing,Verify empty state when no results,None,1. Search for "xyz123",xyz123,Empty state displayed,Medium,Pass
+TC-PROD-011,Product Listing,Verify clear filters,None,1. Apply filters then click Clear Filters,None,All filters reset,Low,Pass
+TC-DETAIL-001,Product Detail,Verify product detail page loads,None,1. Navigate to /products/wireless-headphones-pro,None,Product detail page loads,High,Pass
+TC-DETAIL-002,Product Detail,Verify image gallery,None,1. Click on thumbnail images,None,Main image changes to selected,Medium,Pass
+TC-DETAIL-003,Product Detail,Verify color selector,None,1. Click on different color options,Black,Color selection updates,Medium,Pass
+TC-DETAIL-004,Product Detail,Verify size selector,None,1. Click on different size options,40mm,Size selection updates,Medium,Pass
+TC-DETAIL-005,Product Detail,Verify quantity selector,None,1. Click + button 2 times,2,Quantity updates to 2,Medium,Pass
+TC-DETAIL-006,Product Detail,Verify add to cart,None,1. Click "Add to Cart" button,None,Item added to cart, toast shown,High,Pass
+TC-DETAIL-007,Product Detail,Verify add to wishlist,None,1. Click wishlist heart icon,None,Item added to wishlist,High,Pass
+TC-DETAIL-008,Product Detail,Verify reviews section,None,1. Scroll to reviews section,None,Reviews displayed if available,Medium,Pass
+TC-DETAIL-009,Product Detail,Verify related products,None,1. Scroll to related products,None,Related products displayed,Medium,Pass
+TC-CART-001,Cart,Verify cart page displays,None,1. Add item to cart and navigate to /cart,None,Cart page displays with items,High,Pass
+TC-CART-002,Cart,Verify quantity update,None,1. Click + on quantity selector,2,Quantity updates,High,Pass
+TC-CART-003,Cart,Verify item removal,None,1. Click Remove link,None,Item removed from cart,High,Pass
+TC-CART-004,Cart,Verify clear cart,None,1. Click Clear Cart button,None,All items removed,Medium,Pass
+TC-CART-005,Cart,Verify apply SAVE10 coupon,None,1. Enter SAVE10 and click Apply,SAVE10,10% discount applied,High,Pass
+TC-CART-006,Cart,Verify apply FREESHIP coupon,None,1. Enter FREESHIP and click Apply,FREESHIP,Shipping shows as Free,High,Pass
+TC-CART-007,Cart,Verify invalid coupon,None,1. Enter INVALID and click Apply,INVALID,Error message shown,Medium,Pass
+TC-CART-008,Cart,Verify total calculation,None,1. View order summary,None,Total calculates correctly,High,Pass
+TC-CART-009,Cart,Verify empty cart state,None,1. Clear cart,None,Empty cart state displayed,Medium,Pass
+TC-CART-010,Cart,Verify proceed to checkout,None,1. Click Proceed to Checkout,None,Navigates to /checkout,Medium,Pass
+TC-WISHLIST-001,Wishlist,Verify wishlist page displays,None,1. Add item to wishlist and navigate to /wishlist,None,Wishlist page displays items,High,Pass
+TC-WISHLIST-002,Wishlist,Verify remove from wishlist,None,1. Click remove button,None,Item removed from wishlist,High,Pass
+TC-WISHLIST-003,Wishlist,Verify move to cart,None,1. Click "Add to Cart" on wishlist item,None,Item moved to cart,High,Pass
+TC-WISHLIST-004,Wishlist,Verify empty wishlist state,None,1. Remove all items,None,Empty wishlist state shown,Medium,Pass
+TC-CHECKOUT-001,Checkout,Verify checkout page loads,None,1. Add item and navigate to /checkout,None,Checkout form displayed,High,Pass
+TC-CHECKOUT-002,Checkout,Verify required field validation,None,1. Click Place Order without filling form,None,Validation errors shown,High,Pass
+TC-CHECKOUT-003,Checkout,Verify email validation,None,1. Enter invalid email format,invalid,Email error shown,High,Pass
+TC-CHECKOUT-004,Checkout,Verify phone validation,None,1. Enter invalid phone,123,Phone error shown,High,Pass
+TC-CHECKOUT-005,Checkout,Verify payment method selection,None,1. Select different payment methods,Cash on Delivery,Selection updates,Medium,Pass
+TC-CHECKOUT-006,Checkout,Verify order placement,None,1. Fill form and click Place Order,Valid data,Order success page shown,High,Pass
+TC-CHECKOUT-007,Checkout,Verify empty cart redirect,None,1. Go to /checkout with empty cart,None,Redirected or message shown,Medium,Pass
+TC-ORDER-001,Order Success,Verify success page displays,None,1. Complete checkout,None,Success page with order number,High,Pass
+TC-ORDER-002,Order Success,Verify continue shopping,None,1. Click Continue Shopping,None,Navigates to /products,Medium,Pass
+TC-404-001,404 Page,Verify 404 page displays,None,1. Navigate to /invalid-route,None,404 page displays,Medium,Pass
+TC-404-002,404 Page,Verify navigation links,None,1. Click "Go to Home",None,Navigates to home page,Medium,Pass
+TC-NAV-001,Navigation,Verify header navigation links,None,1. Click each nav link,None,Correct pages load,High,Pass
+TC-NAV-002,Navigation,Verify cart icon shows count,None,1. Add 2 items to cart,2 items,Cart badge shows 2,High,Pass
+TC-NAV-003,Navigation,Verify wishlist icon shows count,None,1. Add 3 items to wishlist,3 items,Wishlist badge shows 3,High,Pass
+TC-RESP-001,Responsive,Verify mobile menu,Mobile,1. Shrink window and click menu icon,Mobile width,Menu opens/closes,Medium,Pass
+TC-RESP-002,Responsive,Verify product grid on mobile,Mobile,1. View products on mobile,Mobile width,Grid adjusts to 1 column,Medium,Pass
+TC-RESP-003,Responsive,Verify filters sidebar on mobile,Mobile,1. View filters on mobile,Mobile width,Filters stack vertically,Medium,Pass
